@@ -81,7 +81,7 @@ p{
 
      }
     .portfolioHL__item{
-        background: var(--color -bg-variant);
+        background: var(--color-bg-variant);
      }
     .portfolioHL__item h3{
         font-size: smaller;

@@ -10,7 +10,6 @@ import Footer from './components/footer/Footer'
 const App = () => {
   return (
     <>
-    {/* <h1>testasfa</h1> */}
       <Head />
       <Navbar />
       <About />
