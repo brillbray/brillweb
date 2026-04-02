@@ -4,7 +4,7 @@ import './portfolioGrid.css'
 import img1 from '../../assets/3D/Props/Barrett_Rendered.png'
 import img2 from '../../assets/3D/Props/Uzi_RenderAll_TranspBG.png'
 import img3 from '../../assets/3D/Props/SmokeGrenade_Render.png'
-import img4 from '../../assets/3D/Props/StylizeShovel_AllPerspective.png'
+import img4 from '../../assets/3D/Environment/UE_ProgressSurvivalHorrorEnvironment05D_AlmostDone.png'
 
 import game1 from '../../assets/MainMenu.png'
 import game2 from '../../assets/LimusOutbreak.png'

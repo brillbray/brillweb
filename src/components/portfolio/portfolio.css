@@ -34,13 +34,16 @@
     background:transparent;
     /* transform: scale(1.5); */
     transition: transform .5s ease-in-out; 
+}
 
+.item_link{
+    display: flex;
+    justify-content: space-around;
 }
 
 .portfolio__item h3{
     margin: .5rem 0 1rem;
 }
-
 
 .portfolio__item-cta{
     display: flex;

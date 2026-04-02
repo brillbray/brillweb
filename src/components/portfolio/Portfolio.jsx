@@ -60,10 +60,10 @@ import threeDPortoProp5 from '../../assets/3D/Props/WellWater_Render.png'
 import threeDPortoProp6 from '../../assets/3D/Props/FireHydrant_Render.png'
 import threeDPortoProp7 from '../../assets/3D/Props/HumanHand_Render.png'
 
-
-import threeDPortoEnv1 from '../../assets/3D/Environment/MyRoom_Render.png'
-import threeDPortoEnv2 from '../../assets/3D/Environment/LivingRoom_Rev_Render.png'
-import threeDPortoEnv3 from '../../assets/3D/Environment/StylizedHouseAtSea.png'
+import threeDPortoEnv1 from '../../assets/3D/Environment/UE_ProgressSurvivalHorrorEnvironment05D_AlmostDone.png'
+import threeDPortoEnv2 from '../../assets/3D/Environment/MyRoom_Render.png'
+import threeDPortoEnv3 from '../../assets/3D/Environment/LivingRoom_Rev_Render.png'
+import threeDPortoEnv4 from '../../assets/3D/Environment/StylizedHouseAtSea.png'
 // import threeDPortoEnv3 from '../../assets/3D/Environment/StylizedHouseAtSea.png'
 
 import threeDPortoChar1 from '../../assets/3D/Character/OniMask_Wireframe.png'
@@ -127,13 +127,13 @@ const game = [
  
 ]
 
-const pixelArtPorto = [
-  {
-    id:1,
-    image: pixelArt1 ,
-    title: 'Firewood',
-  },
-]
+// const pixelArtPorto = [
+//   {
+//     id:1,
+//     image: pixelArt1 ,
+//     title: 'Firewood',
+//   },
+// ]
 
 // const webPorto = [
 //   {
@@ -299,18 +299,19 @@ const ThreeDEnv = [
   {
     id: 1,
     image: threeDPortoEnv1,
-    title: '3D Isometric Room',
-    sketchfab: "https://sketchfab.com/3d-models/isometric-room-diorama-366a5f1f99c645f884f8632183729e62",
+    title: '3D Horror Environment Level Design - Corridor (WIP)',
+    artstation : "https://www.artstation.com/artwork/8B6g2m",
   },
   {
     id: 2,
     image: threeDPortoEnv2,
-    title: '3D Isometric Room - Living Room'
+    title: '3D Isometric Room',
+    sketchfab: "https://sketchfab.com/3d-models/isometric-room-diorama-366a5f1f99c645f884f8632183729e62"
   },
   {
     id: 3,
     image: threeDPortoEnv3,
-    title: '3D Stylized House At Sea'
+    title: '3D Isometric Room - Living Room'
   },
 ]
 
@@ -338,7 +339,7 @@ const Portfolio = () => {
       
       <div className="container portfolio__container">
         {
-          ThreeDProp.map(({id, image, title,projectdesc, prodTime, artstation, gifvideo}) => {
+          ThreeDProp.map(({id, image, title, projectdesc, prodTime, artstation, gifvideo}) => {
             return(
               <article key={id} className="portfolio__item">
               <div className="portfolio__item-image">
@@ -388,13 +389,14 @@ const Portfolio = () => {
       <h1 id='porto-h1'>3D Environment</h1>
       <div className="container portfolio__container">
         {
-          ThreeDEnv.map(({id, image, title, sketchfab}) => {
+          ThreeDEnv.map(({id, image, title, sketchfab, artstation}) => {
             return(
               <article key={id} className="portfolio__item">
               <div className="portfolio__item-image">
                 <img src={image}/>
               </div>
               <h3>{title}</h3>   
+              <div className="item_link">
               <a 
                 href={sketchfab}
                 target="_blank"
@@ -410,8 +412,27 @@ const Portfolio = () => {
                 />
             
               </a>
-                  <p style={{textAlign:'center'}}>Sketchfab</p>     
+                  <p style={{textAlign:'center'}}>Sketchfab</p>   
+                    <a 
+                href={artstation}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaArtstation
+                  style={{
+                    cursor: 'pointer',
+                    transition: 'transform 0.2s'
+                  }}
+                  onMouseEnter={e => e.currentTarget.style.transform = "scale(1.2)"}
+                  onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+                  
+                />
+            
+              </a>
+                  <p style={{textAlign:'center'}}>Artstation</p>  
+              </div>
               </article>
+              
             )
           })
         }
